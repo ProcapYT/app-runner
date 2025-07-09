@@ -1,0 +1,46 @@
+{
+    "name": "app-runner",
+    "version": "1.2.0",
+    "main": "src/main.js",
+    "scripts": {
+        "start": "electron .",
+        "build": "electron-builder",
+        "build-win": "electron-builder --win nsis",
+        "build-linux": "electron-builder --linux deb",
+        "build-mac": "electron-builder --mac dmg"
+    },
+    "author": "Samuel Pedrera",
+    "build": {
+        "appId": "com.sam.apprunner",
+        "productName": "App Runner",
+        "win": {
+            "icon": "icon/256x256.png",
+            "target": "nsis"
+        },
+        "nsis": {
+            "oneClick": false,
+            "perMachine": false,
+            "allowToChangeInstallationDirectory": true
+        },
+        "mac": {
+            "target": "dmg",
+            "icon": "icon/256x256.png"
+        },
+        "linux": {
+            "target": [
+                "deb"
+            ],
+            "icon": "icon"
+        }
+    },
+    "license": "MIT",
+    "description": "",
+    "devDependencies": {
+        "electron": "^37.2.0",
+        "electron-builder": "^26.0.12"
+    },
+    "dependencies": {
+        "electron-prompt": "^1.7.0",
+        "tree-kill": "^1.2.2"
+    }
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>App Runner</title>
+    </head>
+    <body>
+        <div class="selectFolder">
+            <div class="selectFolderTitle">No folder selected, please select a folder</div>
+            <button id="selectFolderButton">Select Folder</button>
+        </div>
+
+        <div class="mainContainer hidden">
+            <div class="appsContainer">
+                <div class="favouriteApps">
+                    <div style="font-weight: bold; margin-bottom: 5px; margin-top: 5px;">Favourite:</div>
+                </div>
+
+                <div class="normalApps">
+                    <div style="font-weight: bold; margin-bottom: 5px; margin-top: 15px;">Not favourite:</div>
+                </div>
+            </div>
+
+            <div class="appDetailsContainer hidden">
+                <div style="display: flex; flex-direction: row;">
+                    <div class="appNameTitle"></div> 
+                    <div class="configButton" id="renameButton"><i class="fa-solid fa-pencil"></i></div>
+                    <div class="configButton" id="favouriteButton"><i class="fa-solid fa-star"></i></div>
+                    <div class="launchAppButton"></div>
+                </div>
+                
+                <div style="display: flex; flex-direction: column;">
+                    <label for="executableFileInput" class="appPathText"></label>
+                    <input type="text" class="executableFileInput" id="executableFileInput" placeholder="app.exe">
+                </div>
+
+                <div style="display: flex; flex-direction: column;">
+                    <label for="launchParameters">Launch Parameters</label>
+                    <input type="text" class="launchParameters" id="launchParameters" placeholder="--test-parameter">
+                </div>
+            </div>
+        </div>
+
+        <script src="./fontawesomeLoader.js"></script>
+        <script type="module" src="./js/main.js"></script>
+        <script type="module" src="./js/runApp.js"></script>
+        <script type="module" src="./js/connections.js"></script>
+    </body>
+</html>

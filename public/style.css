@@ -1,0 +1,182 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+*[data-status="running"] {
+    color: #54bb54;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #333;
+    color: #fff;
+}
+
+.selectFolder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#selectFolderButton {
+    background-color: #ddd;
+    width: 170px;
+    height: 40px;
+    border: none;
+    outline: none;
+    border-radius: 2px;
+    margin-top: 100px;
+    cursor: pointer;
+}
+
+#selectFolderButton:hover {
+    background-color: #aaa;
+}
+
+.selectFolderTitle {
+    font-size: 30px;
+}
+
+.mainContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.appsContainer {
+    background-color: #555;
+    height: 100%;
+    width: 300px;
+}
+
+.appButton {
+    height: 30px;
+    width: 100%;
+    background-color: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.appButton:hover {
+    background-color: #333;
+}
+
+.appButton .appName {
+    margin-left: 5px;
+    font-weight: bold;
+}
+
+.appButton .appStatus {
+    font-size: small;
+    margin-left: 10px;
+}
+
+.appDetailsContainer {
+    height: 100%;
+    width: calc(100dvw - 300px);
+}
+
+.appDetailsContainer .appNameTitle {
+    font-size: 30px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.appDetailsContainer .launchAppButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 100px;
+    margin-top: 10px;
+    margin-left: 20px;
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+.appDetailsContainer .launchAppButton[data-status="launch"] {
+    background-color: #116311;
+}
+
+.appDetailsContainer .launchAppButton[data-status="launch"]::before {
+    content: "Launch";
+}
+
+.appDetailsContainer .launchAppButton[data-status="launch"]:hover {
+    background-color: #0b420b;
+}
+
+.appDetailsContainer .launchAppButton[data-status="cancel"] {
+    background-color: #a7a7a7;
+}
+
+.appDetailsContainer .launchAppButton[data-status="cancel"]::before {
+    content: "Cancel";
+}
+
+.appDetailsContainer .launchAppButton[data-status="cancel"]:hover {
+    background-color: #757575;
+}
+
+.configButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: transparent;
+    cursor: pointer;
+    color: #ccc;
+    margin-top: 15px;
+    margin-left: 10px;
+}
+
+.configButton:hover {
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+.appIcon {
+    width: 20px;
+    height: 20px;
+}
+
+.favourite {
+    color: yellow;
+}
+
+label {
+    font-size: small;
+    font-weight: bold;
+    color: #ddd;
+    margin-left: 10px;
+    margin-bottom: 3px;
+    margin-top: 30px;
+}
+
+input {
+    width: calc(100% - 20px);
+    margin-left: 10px;
+    height: 40px;
+    padding: 5px;
+    background-color: #555;
+    border: none;
+    outline: none;
+    color: #fff;
+}
+
+.hidden {
+    display: none;
+}
