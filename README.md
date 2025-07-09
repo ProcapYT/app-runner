@@ -65,6 +65,6 @@ To build the app (make it an installer or executable .exe, .deb, .appimage ...):
 
 - Icons from [Flaticon](https://www.flaticon.com/), designed by:
   - Logo: [Judanna](https://www.flaticon.com/authors/judanna) — License [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
-  - Imágenes: [FauzIDEA](https://www.flaticon.com/authors/fauzidea) — License [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+  - Images: [FauzIDEA](https://www.flaticon.com/authors/fauzidea) — License [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 
 - Icons from [Font Awesome](https://fontawesome.com/) — License [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
