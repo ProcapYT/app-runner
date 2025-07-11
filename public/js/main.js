@@ -53,6 +53,16 @@ async function startMainThread() {
         const $appStatus = document.createElement("div");
         const $appIcon = document.createElement("img");
 
+        if (!Object.hasOwn(appsData, app)) {
+            appsData = await updateAppsData(app, {
+                executable: "",
+                launchParameters: "",
+                customAppName: app,
+                appName: app,
+                isFavourite: false,
+            });
+        }
+
         $appButton.dataset.appName = app;
         $appStatus.textContent = "";
         setAppIcon($appIcon, appsData[app].executable);
@@ -72,16 +82,6 @@ async function startMainThread() {
         } else {
             $normalAppsContainer.classList.remove("hidden");
             $normalAppsContainer.append($appButton);
-        }
-
-        if (!Object.hasOwn(appsData, app)) {
-            appsData = await updateAppsData(app, {
-                executable: "",
-                launchParameters: "",
-                customAppName: app,
-                appName: app,
-                isFavourite: false,
-            });
         }
 
         $appName.textContent = appsData[app].customAppName ?? app;
